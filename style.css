@@ -1,0 +1,140 @@
+:root {
+    
+    /* Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+    /* Border Style */
+    --border-width: .3rem;
+}
+
+/* Global Style */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    
+    background-color: var(--Very-Light-Gray);
+    padding: 4rem 2rem ;
+    gap: 3rem;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    max-width: 32rem;
+    justify-self: center;
+}
+.main-content > h2 {
+    font-size: 2.1rem;
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+}
+.main-content > h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+}
+.main-content > p {
+    margin-top: 1rem;
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+}
+
+/* Section */
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 1.5rem;
+    /* padding: 2rem; */
+}
+@media (max-width: 900px) {
+    .main-content > h2,
+    .main-content > h1 {
+        font-size: 1.5rem;
+    }
+    section {
+        grid-template-columns: auto;
+    }
+
+}
+
+/* Grid-Row */
+/* Just "Supervisor" And 'Calculator" */
+.content.Supervisor,
+.content.Calculator {
+    grid-row: span 2;
+    align-self: center;
+}
+/* Just "Team-Builder" And 'Karma" */
+.content.Team-Builder,
+.content.Karma {
+    grid-row: span 1;
+    align-self: center;
+}
+
+/* Border-Top */
+/* Just "Supervisor" */
+.content.Supervisor {
+    border-top: var(--border-width) solid var(--Cyan);
+}
+/* Just "Team-Builder" */
+.content.Team-Builder {
+    border-top: var(--border-width) solid var(--Red);
+}
+/* Just "Karma" */
+.content.Karma {
+    border-top: var(--border-width) solid var(--Orange);
+}
+/* Just "Calculator" */
+.content.Calculator  {
+    border-top: var(--border-width) solid var(--Blue);
+}
+
+/* All Contents Style */
+.content {
+    max-width: 350px;
+    padding: 1.5rem;
+
+    display: grid;
+    border-radius: .3rem;
+    
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+}
+
+/* All Content Headers */
+.content h3 {
+    color: var(--Very-Dark-Blue);
+}
+
+/* All Content Paragraphs */
+.content p {
+    margin-top: .6rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+}
+
+/* All Content Icons */
+.icon {
+    margin-top: 3rem;
+    justify-self: flex-end;
+}
